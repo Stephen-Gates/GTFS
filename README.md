@@ -26,6 +26,9 @@ Tests are performed using [GoodTables](http://goodtables.okfnlabs.org).
 [Successful test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) data are recorded via a link to the GoodTables results.
 
 - The valid data is tested without and with a schema.
+  - use the link to the raw data and schema files as input to GoodTables e.g.
+    - https://raw.githubusercontent.com/Stephen-Gates/GTFS/master/data/agency.txt
+    - https://raw.githubusercontent.com/Stephen-Gates/GTFS/master/schemas/agency-schema.json
 - The invalid [test data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is tested with a schema to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
 
 ## Schemas
