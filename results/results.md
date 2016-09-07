@@ -2,7 +2,6 @@
 
 Test results using valid data and no schema:
 - [agency](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-
 - [calendar](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
 - [calendar_dates](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar_dates.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
 - [feed_info](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ffeed_info.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
