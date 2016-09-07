@@ -18,7 +18,7 @@ Test results using valid data and its schema:
 - feed_info
 - routes
 - shapes
-- stops - fail due to optional url test (see https://github.com/frictionlessdata/goodtables/issues/109)
+- stops - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
 - trips
 
 GoodTables:
