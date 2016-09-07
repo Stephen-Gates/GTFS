@@ -7,7 +7,7 @@ Test results using valid data and no schema:
 - [calendar_dates](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar_dates.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
 - [feed_info](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ffeed_info.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
 - [routes](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [shapes](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)  * 30,000 rows processed - seems overly neat.
+- [shapes](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)  *30,000 rows processed - seemed overly neat.
 - [stops](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
 - [trips](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ftrips.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
 
@@ -24,4 +24,5 @@ Test results using valid data and its schema:
 GoodTables:
 
 - doesn't let you store test results for failed tests.
+- only returns a [limited number of errors](https://github.com/frictionlessdata/goodtables-web/issues/66) so the test data will need to be split into smaller sets.
 - doesn't use the primary key to check for duplicates ([see goodtables-web #64](https://github.com/frictionlessdata/goodtables-web/issues/64))
