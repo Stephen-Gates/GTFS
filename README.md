@@ -39,7 +39,7 @@ The schemas were created using [DataPackagist](http://datapackagist.okfnlabs.org
 
 A datapackage.json file is created for you with some inferred data types. Download this file.
 
-GoodTables can only use a json table schema for validation. You can extract this from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
+GoodTables can only use a json table schema for validation ([See GoodTables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract this from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
 
 Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc.
 

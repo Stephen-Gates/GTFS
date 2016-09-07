@@ -1,5 +1,5 @@
 #GoodTables Test Results
-Note GoodTables has a 100,000 row limit (see https://github.com/frictionlessdata/goodtables-web/issues/54)
+Note: GoodTables has a 100,000 row limit (see [goodtables-web #54](https://github.com/frictionlessdata/goodtables-web/issues/54))
 
 Test results using valid data and no schema:
 - [agency](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
@@ -21,4 +21,7 @@ Test results using valid data and its schema:
 - stops - fail due to optional url test (see https://github.com/frictionlessdata/goodtables/issues/109)
 - trips
 
-GoodTables doesn't let you store test results for failed tests.
+GoodTables:
+
+- doesn't let you store test results for failed tests.
+- doesn't use the primary key to check for duplicates ([see goodtables-web #64](https://github.com/frictionlessdata/goodtables-web/issues/64))
