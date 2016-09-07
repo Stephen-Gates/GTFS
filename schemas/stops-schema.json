@@ -1,0 +1,102 @@
+{
+  "fields": [
+    {
+      "name": "stop_id",
+      "description": "Contains an ID that uniquely identifies a stop or station. Multiple routes may use the same stop. The stop_id is dataset unique.",
+      "type": "integer",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "unique": true
+      }
+    },
+    {
+      "name": "stop_code",
+      "description": "Contains short text or a number that uniquely identifies the stop for passengers. Stop codes are often used in phone-based transit information systems or printed on stop signage to make it easier for riders to get a stop schedule or real-time arrival information for a particular stop.  The stop_code field should only be used for stop codes that are displayed to passengers. For internal codes, use stop_id. This field should be left blank for stops without a code.",
+      "type": "integer",
+      "format": "default",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "stop_name",
+      "description": "Contains the name of a stop or station. Please use a name that people will understand in the local and tourist vernacular.",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "stop_desc",
+      "description": "Contains a description of a stop. Please provide useful, quality information. Do not simply duplicate the name of the stop.",
+      "type": "any",
+      "format": "default",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "stop_lat",
+      "description": "Contains the latitude of a stop or station. The field value must be a valid WGS 84 latitude. A latitude within the bounds of Queensland ",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "minimum": -29.5,
+        "maximum": -9
+      }
+    },
+    {
+      "name": "stop_lon",
+      "description": "Contains the longitude of a stop or station. The field value must be a valid WGS 84 longitude value from -180 to 180. A longitude within the bounds of Queensland",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "minimum": 138,
+        "maximum": 155
+      }
+    },
+    {
+      "name": "zone_id",
+      "description": "Defines the fare zone for a stop ID. Zone IDs are required if you want to provide fare information using fare_rules.txt. If this stop ID represents a station, the zone ID is ignored.",
+      "type": "string",
+      "format": "default",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "stop_url",
+      "description": "Contains the URL of a web page about a particular stop. This should be different from the agency_url and the route_url fields.  The value must be a fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values.",
+      "type": "string",
+      "format": "uri",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "location_type",
+      "description": "Identifies whether this stop ID represents a stop or station. If no location type is specified, or the location_type is blank, stop IDs are treated as stops. Stations can have different properties from stops when they are represented on a map or used in trip planning.  The location type field can have the following values: •0 or blank: Stop. A location where passengers board or disembark from a transit vehicle.  •1: Station. A physical structure or area that contains one or more stop.",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "parent_station",
+      "description": "For stops that are physically located inside stations, this field identifies the station associated with the stop. To use this field, stops.txt must also contain a row where this stop ID is assigned location type=1.",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "platform_code",
+      "description": "Indicates the platform identifier for a platform stop. This should be just the platform identifier (eg. “G” or “3”). Words like “platform” or “track” (or the feed’s language-specific equivalent) should not be included. This allows feed consumers to more easily internationalize and localize the platform identifier into other languages.",
+      "type": "string",
+      "format": "default"
+    }
+  ],
+  "primaryKey": [
+    "stop_id"
+  ]
+}

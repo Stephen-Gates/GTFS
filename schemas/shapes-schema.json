@@ -1,0 +1,45 @@
+{
+  "fields": [
+    {
+      "name": "shape_id",
+      "description": "Contains an ID that uniquely identifies a shape.",
+      "type": "integer",
+      "format": "default",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "shape_pt_lat",
+      "description": "Associates a shape point's latitude with a shape ID. The field value must be a valid WGS 84 latitude. Each row in shapes.txt represents a shape point in your shape definition.",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "minimum": -29.5,
+        "maximum": -9
+      }
+    },
+    {
+      "name": "shape_pt_lon",
+      "description": "Associates a shape point's longitude with a shape ID. The field value must be a valid WGS 84 longitude value from -180 to 180. Each row in shapes.txt represents a shape point in your shape definition.",
+      "type": "number",
+      "format": "default",
+      "constraints": {
+        "required": true,
+        "minimum": 138,
+        "maximum": 155
+      }
+    },
+    {
+      "name": "shape_pt_sequence",
+      "description": "Associates the latitude and longitude of a shape point with its sequence order along the shape. The values for shape_pt_sequence must be non-negative integers, and they must increase along the trip.",
+      "type": "integer",
+      "format": "default",
+      "constraints": {
+        "required": false,
+        "minimum": 0
+      }
+    }
+  ]
+}
