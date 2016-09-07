@@ -21,7 +21,6 @@ The data was downloaded, unzipped, and then uploaded to GitHub.
 Two data files (shapes.txt and trips.txt) were too large to load into GitHub. They were truncated and uploaded. They will be adequate to use for testing valid data.
 
 ## Tests
-
 Tests are performed using GoodTables](http://goodtables.okfnlabs.org)
 [Successful test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) data are recorded.
 
