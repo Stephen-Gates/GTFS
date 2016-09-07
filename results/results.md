@@ -16,9 +16,13 @@ Test results using valid data and its schema:
 - calendar
 - calendar_dates
 - feed_info
-- routes
+- routes 
+  - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
+  - need to confirn if null allowed for route_type
+  - file must contain at least one of route_short_name or route_long_name – no obvious test for this. Required:false set on both 
 - shapes
-- stops - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
+- stops   
+  - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
 - trips
 
 GoodTables:
