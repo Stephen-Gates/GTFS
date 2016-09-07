@@ -21,9 +21,12 @@ The data was downloaded, unzipped, and then uploaded to GitHub.
 Two data files (shapes.txt and trips.txt) were too large to load into GitHub. They were truncated and uploaded. They will be adequate to use for testing valid data.
 
 ## Tests
-The data is tested using [GoodTables](http://goodtables.okfnlabs.org).
-The data is then tested using GoodTables and the relevant schema.
-Lastly the [test data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is used in GoodTables using the relevant schema to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints))
+
+Tests are performed using GoodTables](http://goodtables.okfnlabs.org)
+[Successful test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) data are recorded.
+
+The valid data is tested without and with a schema.
+The invalid [test data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is tested with a schema to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
 
 ## Schemas
 The schemas were created using [DataPackagist](http://datapackagist.okfnlabs.org).
