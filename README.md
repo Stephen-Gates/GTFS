@@ -22,6 +22,4 @@ Put information on preparing the data in a Preparation section. In particular, a
 
 
 ## License
-Put additional information on the permissions and licensing of the data in the Data Package in the License section.
-
 All items in this repository, apart from the data, are licenced under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
