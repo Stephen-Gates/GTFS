@@ -1,5 +1,13 @@
 #GoodTables Tests
-Use the links below to perform the tests using GoodTables.
+Use the links below to perform the tests using GoodTables. 
+
+The test links call GoodTables using links to the raw data and schema files as input to GoodTables e.g.
+  - valid data: https://raw.githubusercontent.com/Stephen-Gates/GTFS/master/data/agency.txt
+  - schema: https://raw.githubusercontent.com/Stephen-Gates/GTFS/master/schemas/agency-schema.json
+  - invalid data: https://github.com/Stephen-Gates/GTFS/blob/master/tests/agency.txt
+    
+The URL passed to GoodTables needs escaped versions of the links above e.g. 
+  - http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json
 
 Note: GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](https://github.com/frictionlessdata/goodtables-web/issues/54)) but it appears to be [limited to 30,000*](https://github.com/frictionlessdata/goodtables-web#api).
 
