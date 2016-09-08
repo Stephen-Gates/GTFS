@@ -27,8 +27,6 @@ Note: GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](ht
 - Test calendar_dates.txt with a schema
 - Test feed_info.txt with a schema
 - [Test routes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Froutes-schema.json)
-  - need to confirm if null is allowed for route_type
-  - file must contain at least one of route_short_name or route_long_name – no obvious test for this. Required:false set on both 
 - [Test shapes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json)  
 - [Test stops.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fstops-schema.json)  
 - Test trips.txt with a schema
