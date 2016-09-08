@@ -1,0 +1,9 @@
+language: python
+python:
+  - 3.4
+
+install:
+  - pip install --upgrade -r scripts/requirements.txt
+
+script:
+  - python scripts/test_data.py
