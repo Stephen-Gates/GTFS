@@ -1,1 +1,375 @@
-{"name":"gtfs-south-east-queensland","title":"GTFS South East Queensland","description":"Timetable data and stop locations for all available TransLink South East Queensland urban bus, rail and ferry services.","homepage":"https://data.qld.gov.au/dataset/general-transit-feed-specification-gtfs-seq","version":"1","license":{"type":"CC BY 3.0 AU","url":"https://creativecommons.org/licenses/by/3.0/au/"},"author":"Transport and Main Roads, Queensland Government","resources":[{"name":"agency","title":"Agency","schema":{"fields":[{"name":"agency_name","type":"string","format":"default"},{"name":"agency_url","type":"string","format":"default"},{"name":"agency_timezone","type":"string","format":"default"},{"name":"agency_lang","type":"string","format":"default"},{"name":"agency_phone","type":"string","format":"default"}]},"path":"agency.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"calendar_dates","title":"Calendar Dates","schema":{"fields":[{"name":"service_id","type":"string","format":"default"},{"name":"date","type":"datetime","format":"default"},{"name":"exception_type","type":"integer","format":"default"}]},"path":"calendar_dates.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"calendar","title":"Calendar","schema":{"fields":[{"name":"service_id","type":"string","format":"default"},{"name":"monday","type":"integer","format":"default"},{"name":"tuesday","type":"integer","format":"default"},{"name":"wednesday","type":"integer","format":"default"},{"name":"thursday","type":"integer","format":"default"},{"name":"friday","type":"integer","format":"default"},{"name":"saturday","type":"integer","format":"default"},{"name":"sunday","type":"integer","format":"default"},{"name":"start_date","type":"datetime","format":"default"},{"name":"end_date","type":"datetime","format":"default"}]},"path":"calendar.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"feed_info","title":"Feed Info","schema":{"fields":[{"name":"feed_publisher_name","type":"string","format":"default"},{"name":"feed_publisher_url","type":"string","format":"default"},{"name":"feed_lang","type":"string","format":"default"},{"name":"feed_start_date","type":"datetime","format":"default"},{"name":"feed_end_date","type":"datetime","format":"default"}]},"path":"feed_info.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"routes","title":"Routes","schema":{"fields":[{"name":"route_id","type":"string","format":"default"},{"name":"route_short_name","type":"string","format":"default"},{"name":"route_long_name","type":"string","format":"default"},{"name":"route_desc","type":"any","format":"default"},{"name":"route_type","type":"integer","format":"default"},{"name":"route_url","type":"string","format":"default"},{"name":"route_color","type":"string","format":"default"},{"name":"route_text_color","type":"string","format":"default"}]},"path":"routes.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"shapes","title":"Shapes","schema":{"fields":[{"name":"shape_id","type":"integer","format":"default"},{"name":"shape_pt_lat","type":"number","format":"default"},{"name":"shape_pt_lon","type":"number","format":"default"},{"name":"shape_pt_sequence","type":"integer","format":"default"}]},"path":"shapes.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"stops","title":"Stops","schema":{"fields":[{"name":"stop_id","type":"integer","format":"default"},{"name":"stop_code","type":"integer","format":"default"},{"name":"stop_name","type":"string","format":"default"},{"name":"stop_desc","type":"any","format":"default"},{"name":"stop_lat","type":"number","format":"default"},{"name":"stop_lon","type":"number","format":"default"},{"name":"zone_id","type":"string","format":"default"},{"name":"stop_url","type":"string","format":"default"},{"name":"location_type","type":"integer","format":"default"},{"name":"parent_station","type":"string","format":"default"},{"name":"platform_code","type":"string","format":"default"}]},"path":"stops.txt","format":"CSV","mediatype":"text/csv","bytes":0},{"name":"trips","title":"Trips","schema":{"fields":[{"name":"route_id","type":"string","format":"default"},{"name":"service_id","type":"string","format":"default"},{"name":"trip_id","type":"string","format":"default"},{"name":"trip_headsign","type":"string","format":"default"},{"name":"direction_id","type":"integer","format":"default"},{"name":"block_id","type":"any","format":"default"},{"name":"shape_id","type":"string","format":"default"}]},"path":"trips.txt","format":"CSV","mediatype":"text/csv","bytes":0}]}
+{
+  "name": "gtfs-south-east-queensland",
+  "title": "GTFS South East Queensland",
+  "description": "Timetable data and stop locations for all available TransLink South East Queensland urban bus, rail and ferry services.",
+  "homepage": "https://data.qld.gov.au/dataset/general-transit-feed-specification-gtfs-seq",
+  "version": "1",
+  "license": {
+    "type": "CC BY 3.0 AU",
+    "url": "https://creativecommons.org/licenses/by/3.0/au/"
+  },
+  "author": "Transport and Main Roads, Queensland Government",
+  "resources": [
+    {
+      "name": "agency",
+      "title": "Agency",
+      "schema": {
+        "fields": [
+          {
+            "name": "agency_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "agency_url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "agency_timezone",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "agency_lang",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "agency_phone",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "agency.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "calendar_dates",
+      "title": "Calendar Dates",
+      "schema": {
+        "fields": [
+          {
+            "name": "service_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "date",
+            "type": "datetime",
+            "format": "default"
+          },
+          {
+            "name": "exception_type",
+            "type": "integer",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "calendar_dates.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "calendar",
+      "title": "Calendar",
+      "schema": {
+        "fields": [
+          {
+            "name": "service_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "monday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "tuesday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "wednesday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "thursday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "friday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "saturday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "sunday",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "start_date",
+            "type": "datetime",
+            "format": "default"
+          },
+          {
+            "name": "end_date",
+            "type": "datetime",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "calendar.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "feed_info",
+      "title": "Feed Info",
+      "schema": {
+        "fields": [
+          {
+            "name": "feed_publisher_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "feed_publisher_url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "feed_lang",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "feed_start_date",
+            "type": "datetime",
+            "format": "default"
+          },
+          {
+            "name": "feed_end_date",
+            "type": "datetime",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "feed_info.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "routes",
+      "title": "Routes",
+      "schema": {
+        "fields": [
+          {
+            "name": "route_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "route_short_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "route_long_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "route_desc",
+            "type": "any",
+            "format": "default"
+          },
+          {
+            "name": "route_type",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "route_url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "route_color",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "route_text_color",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "routes.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "shapes",
+      "title": "Shapes",
+      "schema": {
+        "fields": [
+          {
+            "name": "shape_id",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "shape_pt_lat",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "shape_pt_lon",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "shape_pt_sequence",
+            "type": "integer",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "shapes.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "stops",
+      "title": "Stops",
+      "schema": {
+        "fields": [
+          {
+            "name": "stop_id",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "stop_code",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "stop_name",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "stop_desc",
+            "type": "any",
+            "format": "default"
+          },
+          {
+            "name": "stop_lat",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "stop_lon",
+            "type": "number",
+            "format": "default"
+          },
+          {
+            "name": "zone_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "stop_url",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "location_type",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "parent_station",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "platform_code",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "stops.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    },
+    {
+      "name": "trips",
+      "title": "Trips",
+      "schema": {
+        "fields": [
+          {
+            "name": "route_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "service_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "trip_id",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "trip_headsign",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "direction_id",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "block_id",
+            "type": "any",
+            "format": "default"
+          },
+          {
+            "name": "shape_id",
+            "type": "string",
+            "format": "default"
+          }
+        ]
+      },
+      "path": "trips.txt",
+      "format": "CSV",
+      "mediatype": "text/csv",
+      "bytes": 0
+    }
+  ]
+}
