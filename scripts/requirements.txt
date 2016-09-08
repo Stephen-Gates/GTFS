@@ -1,0 +1,4 @@
+# datapackage
+datapackage==0.6.0
+goodtables==0.7.1
+tabulator==0.3.6
