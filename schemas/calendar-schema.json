@@ -1,0 +1,112 @@
+{
+        "fields": [
+          {
+            "name": "service_id",
+            "title": "Service ID",
+            "description": "Contains an ID that uniquely identifies a set of dates when service is available for one or more routes. Each service_id value can appear at most once in a calendar.txt file. This value is dataset unique. It is referenced by the trips.txt file.",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "unique": true,
+              "required": true
+            }
+          },
+          {
+            "name": "monday",
+            "title": "Monday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Mondays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "tuesday",
+            "title": "Tuesday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Tuesdays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "wednesday",
+            "title": "Wednesday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Wednesdays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "thursday",
+            "title": "Thursday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Thursdays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "friday",
+            "title": "Friday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Fridays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "saturday",
+            "title": "Saturday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Saturdays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "sunday",
+            "title": "Sunday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Sundays.",
+            "type": "integer",
+            "constraints": {
+              "required": true,
+              "minimum" : 0,
+              "maximum" : 1
+            }
+          },
+          {
+            "name": "start_date",
+            "title": "Start Date",
+            "description": "The start_date field contains the start date for the service.  The start_date field's value should be in YYYYMMDD format.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "end_date",
+            "title": "End Date",
+            "description": "Contains the end date for the service. This date is included in the service interval.  The end_date field's value should be in YYYYMMDD format.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": true
+            }
+          }
+        ]
+}
