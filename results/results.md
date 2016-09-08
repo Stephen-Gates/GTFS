@@ -9,7 +9,12 @@ The test links call GoodTables using links to the raw data and schema files as i
 The URL passed to GoodTables needs escaped versions of the links above e.g. 
   - http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json
 
-Note: GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](https://github.com/frictionlessdata/goodtables-web/issues/54)) but it appears to be [limited to 30,000*](https://github.com/frictionlessdata/goodtables-web#api).
+## GoodTables issues
+- GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](https://github.com/frictionlessdata/goodtables-web/issues/54)) but it appears to be [limited to 30,000*](https://github.com/frictionlessdata/goodtables-web#api)
+- only returns a [limited number of errors](https://github.com/frictionlessdata/goodtables-web/issues/66) so the test data will need to be split into smaller sets.
+- GoodTables doesn't use the primary key to check for duplicates ([see goodtables-web #64](https://github.com/frictionlessdata/goodtables-web/issues/64))
+- GoodTables doesn't handle optional uri fields (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
+- view other [goodtables-web](https://github.com/frictionlessdata/goodtables-web/issues) and [goodtables](https://github.com/frictionlessdata/goodtables/issues) issues
 
 ## Test using valid data and no schema:
 - [Test agency.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=)
@@ -41,7 +46,5 @@ Note: GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](ht
 - Test stops.txt with a schema
 - Test trips.txt with a schema
 
-GoodTables:
-- only returns a [limited number of errors](https://github.com/frictionlessdata/goodtables-web/issues/66) so the test data will need to be split into smaller sets.
-- doesn't use the primary key to check for duplicates ([see goodtables-web #64](https://github.com/frictionlessdata/goodtables-web/issues/64))
-- doesn't handle optional uri fields (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
+
+
