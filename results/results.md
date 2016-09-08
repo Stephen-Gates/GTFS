@@ -7,7 +7,7 @@ Use the links below to perform the tests using GoodTables.
 - [Test calendar_dates.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar_dates.txt&format=csv&encoding=&schema_url=)
 - [Test feed_info.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ffeed_info.txt&format=csv&encoding=&schema_url=)
 - [Test routes.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&format=csv&encoding=&schema_url=)
-- [Test shapes.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=) *30,000 rows processed - seemed overly neat.
+- [Test shapes.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=) (Hits 30,000 row limit*)
 - [Test stops.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=)
 - [Test trips.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ftrips.txt&format=csv&encoding=&schema_url=)
 
