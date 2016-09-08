@@ -13,7 +13,7 @@ The data follows the [GTFS specification](https://developers.google.com/transit/
 
 Each data file is defined by a [schema](https://github.com/Stephen-Gates/GTFS/tree/master/schemas). The schemas follow the [json table schema specification](http://specs.frictionlessdata.io/json-table-schema/).
 
-These schemas will be combined into a datapackage.json file to fully describe the data collection. The datapackage.json file will follow the [data package specification](http://specs.frictionlessdata.io/data-packages/).
+These schemas will be combined into a [datapackage.json](https://github.com/Stephen-Gates/GTFS/blob/master/datapackage.json) file to fully describe the data collection. The datapackage.json file will follow the [data package specification](http://specs.frictionlessdata.io/data-packages/).
 
 ## Preparation
 The data was downloaded, unzipped, and then uploaded to GitHub.
@@ -37,7 +37,9 @@ DataPackagist will create a datapackage.json file for you. Download this file.
 
 GoodTables can only use a json table schema for validation ([see goodtables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract the json table schema from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
 
-Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc. Some constraints use regular expressions to define a pattern. Use a online tool to help create and test a regular expresion e.g. [regexr.com](http://regexr.com/) or [regex101](https://regex101.com/).
+Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc. You may like to use the [json table schema schema](https://raw.githubusercontent.com/frictionlessdata/schemas/master/json-table-schema.json) to improve your editing experience.
+
+Some constraints use regular expressions to define a pattern. Use a online tool to help create and test a regular expresion e.g. [regexr.com](http://regexr.com/) or [regex101](https://regex101.com/).
 
 ## License
-All items in this repository, apart from the data, are licenced under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
+All items in this repository, apart from the data, are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
