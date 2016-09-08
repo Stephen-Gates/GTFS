@@ -37,7 +37,7 @@ DataPackagist will create a datapackage.json file for you. Download this file.
 
 GoodTables can only use a json table schema for validation ([see goodtables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract the json table schema from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
 
-Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc.
+Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc. Some constraints use regular expressions to define a pattern. Use a online tool to help create and test a regular expresion e.g. [regexr.com](http://regexr.com/) or [regex101](https://regex101.com/).
 
 ## License
 All items in this repository, apart from the data, are licenced under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
