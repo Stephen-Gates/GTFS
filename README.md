@@ -11,9 +11,9 @@ The data follows the [GTFS specification](https://developers.google.com/transit/
 
 [The data](https://github.com/Stephen-Gates/GTFS/tree/master/data) is made up of a number of files.
 
-Each data file is defined by a [schema](https://github.com/Stephen-Gates/GTFS/tree/master/schemas). The schemas follow the [json table schema specification](http://specs.frictionlessdata.io/json-table-schema/)
+Each data file is defined by a [schema](https://github.com/Stephen-Gates/GTFS/tree/master/schemas). The schemas follow the [json table schema specification](http://specs.frictionlessdata.io/json-table-schema/).
 
-These schemas are combined into a datapackage.json file to fully describe the data collection. The datapackage.json file follows the [data package specification](http://specs.frictionlessdata.io/data-packages/).
+These schemas will be combined into a datapackage.json file to fully describe the data collection. The datapackage.json file will follow the [data package specification](http://specs.frictionlessdata.io/data-packages/).
 
 ## Preparation
 The data was downloaded, unzipped, and then uploaded to GitHub.
@@ -25,17 +25,17 @@ The focus of the tests is to ensure the schemas are correct. There are already [
 
 [Test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) can be verified using links to  [GoodTables](http://goodtables.okfnlabs.org).
 
-[Invalid data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is used to test with a schema to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
+[Invalid test data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is used to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
 
 ## Schemas
-The schemas were created using [DataPackagist](http://datapackagist.okfnlabs.org).
+The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [DataPackagist](http://datapackagist.okfnlabs.org). Using DataPackagist:
 
 - add some basic information about the data file (name, description, license, etc.)
 - upload the data file
 
-A datapackage.json file is created for you with some inferred data types. Download this file.
+DataPackagist will create a datapackage.json file for you. Download this file.
 
-GoodTables can only use a json table schema for validation ([see goodtables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract this from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
+GoodTables can only use a json table schema for validation ([see goodtables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract the json table schema from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
 
 Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc.
 
