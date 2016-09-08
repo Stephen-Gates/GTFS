@@ -1,32 +1,42 @@
-#GoodTables Test Results
+#GoodTables Tests
+Use the links below to perform the tests using GoodTables.
+
 Note: GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](https://github.com/frictionlessdata/goodtables-web/issues/54)) but it appears to be [limited to 30,000*](https://github.com/frictionlessdata/goodtables-web#api).
 
-Test results using valid data and no schema:
-- [agency](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [calendar](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [calendar_dates](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar_dates.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [feed_info](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ffeed_info.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [routes](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [shapes](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)  *30,000 rows processed - seemed overly neat.
-- [stops](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
-- [trips](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ftrips.txt&report_type=grouped&format=csv&row_limit=100000&report_limit=1000)
+## Test using valid data and no schema:
+- [Test agency.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=)
+- [Test calendar.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar.txt&format=csv&encoding=&schema_url=)
+- [Test calendar_dates.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar_dates.txt&format=csv&encoding=&schema_url=)
+- [Test feed_info.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ffeed_info.txt&format=csv&encoding=&schema_url=)
+- [Test routes.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&format=csv&encoding=&schema_url=)
+- [Test shapes.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=) *30,000 rows processed - seemed overly neat.
+- [Test stops.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=)
+- [Test trips.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ftrips.txt&format=csv&encoding=&schema_url=)
 
-Test results using valid data and its schema:
-- [agency](http://goodtables.okfnlabs.org/reports?data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&schema=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json&format=csv&row_limit=100000&report_type=grouped&report_limit=1000)
-- calendar
-- calendar_dates
-- feed_info
-- routes 
+## Test using valid data with its schema:
+- [Test agency.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json)
+- Test calendar.txt with a schema
+- Test calendar_dates.txt with a schema
+- Test feed_info.txt with a schema
+- [Test routes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Froutes-schema.json)
   - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
   - need to confirn if null allowed for route_type
   - file must contain at least one of route_short_name or route_long_name – no obvious test for this. Required:false set on both 
-- [shapes](http://goodtables.okfnlabs.org/reports?row_limit=100000&schema=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json&report_limit=1000&format=csv&data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&report_type=grouped) and an [alternate results link](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json) *30,000 rows processed
-- stops   
+- [Test shapes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json)  
+- [Test stops.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fstops-schema.json)  
   - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
-- trips
+- Test trips.txt with a schema
+
+## Test using invalid data and its schema:
+- Test agency.txt with a schema
+- Test calendar.txt with a schema
+- Test calendar_dates.txt with a schema
+- Test feed_info.txt with a schema
+- Test routes.txt with a schema
+- Test shapes.txt with a schema
+- Test stops.txt with a schema
+- Test trips.txt with a schema
 
 GoodTables:
-
-- doesn't let you store test results for failed tests.
 - only returns a [limited number of errors](https://github.com/frictionlessdata/goodtables-web/issues/66) so the test data will need to be split into smaller sets.
 - doesn't use the primary key to check for duplicates ([see goodtables-web #64](https://github.com/frictionlessdata/goodtables-web/issues/64))
