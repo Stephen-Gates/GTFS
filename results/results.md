@@ -1,7 +1,7 @@
 #GoodTables Tests
 Use the links below to perform the tests using GoodTables. 
 
-## Test using valid data and no schema:
+## Test using valid data and no schema
 - [Test agency.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=)
 - [Test calendar.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar.txt&format=csv&encoding=&schema_url=)
 - [Test calendar_dates.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fcalendar_dates.txt&format=csv&encoding=&schema_url=)
@@ -11,7 +11,7 @@ Use the links below to perform the tests using GoodTables.
 - [Test stops.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=)
 - [Test trips.txt without a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Ftrips.txt&format=csv&encoding=&schema_url=)
 
-## Test using valid data with its schema:
+## Test using valid data with its schema
 - [Test agency.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fagency.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json)
 - Test calendar.txt with a schema
 - Test calendar_dates.txt with a schema
@@ -21,7 +21,7 @@ Use the links below to perform the tests using GoodTables.
 - [Test stops.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fstops-schema.json)  
 - Test trips.txt with a schema
 
-## Test using invalid data and its schema:
+## Test using invalid data and its schema
 - [Test invalid agency.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Ftests%2Fagency.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json)
 - Test calendar.txt with a schema
 - Test calendar_dates.txt with a schema
