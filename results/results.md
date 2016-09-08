@@ -19,24 +19,23 @@ Note: GoodTables supposedly has a 100,000 row limit (see [goodtables-web #54](ht
 - Test calendar_dates.txt with a schema
 - Test feed_info.txt with a schema
 - [Test routes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Froutes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Froutes-schema.json)
-  - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
-  - need to confirn if null allowed for route_type
+  - need to confirm if null is allowed for route_type
   - file must contain at least one of route_short_name or route_long_name – no obvious test for this. Required:false set on both 
 - [Test shapes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json)  
 - [Test stops.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fstops.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fstops-schema.json)  
-  - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
 - Test trips.txt with a schema
 
 ## Test using invalid data and its schema:
-- Test agency.txt with a schema
+- [Test invalid agency.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Ftests%2Fagency.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fagency-schema.json)
 - Test calendar.txt with a schema
 - Test calendar_dates.txt with a schema
 - Test feed_info.txt with a schema
 - Test routes.txt with a schema
-- Test shapes.txt with a schema
+- [Test invalid shapes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Ftests%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json)
 - Test stops.txt with a schema
 - Test trips.txt with a schema
 
 GoodTables:
 - only returns a [limited number of errors](https://github.com/frictionlessdata/goodtables-web/issues/66) so the test data will need to be split into smaller sets.
 - doesn't use the primary key to check for duplicates ([see goodtables-web #64](https://github.com/frictionlessdata/goodtables-web/issues/64))
+- doesn't handle optional uri fields (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
