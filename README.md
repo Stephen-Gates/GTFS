@@ -26,20 +26,20 @@ The focus of the tests is to ensure the schemas are correct. There are already [
 The [tests](https://github.com/Stephen-Gates/GTFS/tree/master/tests) are invalid data that is used to ensure the schema detects all errors (e.g. incorrect [types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
 
 ## Results
-The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) can be verified using links to  [GoodTables](http://goodtables.okfnlabs.org). Tests include:
+The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) can be verified using links to  [Good Tables](http://goodtables.okfnlabs.org). Tests include:
 - testing the valid data without a schema
 - testing the valid data with a schema
 - testing the invalid data with a schema
 
 ## Schemas
-The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [DataPackagist](http://datapackagist.okfnlabs.org). Using DataPackagist:
+The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.okfnlabs.org). Using DataPackagist:
 
 - add some basic information about the data file (name, description, license, etc.)
 - upload the data file
 
-DataPackagist will create a datapackage.json file for you. Download this file.
+Data Packagist will create a datapackage.json file for you. Download this file.
 
-GoodTables can only use a json table schema for validation ([see goodtables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract the json table schema from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
+Good Tables can only use a json table schema for validation ([see goodtables-web #65](https://github.com/frictionlessdata/goodtables-web/issues/65)). You can extract the json table schema from the datapackage.json file. It's this bit `{fields: [...]}`. Save this a separate file.
 
 Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc. You may like to use the [json table schema schema](https://raw.githubusercontent.com/frictionlessdata/schemas/master/json-table-schema.json) to improve your editing experience.
 
