@@ -21,17 +21,11 @@ The data was downloaded, unzipped, and then uploaded to GitHub.
 Two data files (shapes.txt and trips.txt) were too large to load into GitHub. They were truncated and uploaded. They will be adequate to use for testing valid data.
 
 ## Tests
-The focus of the tests is to ensure the datapackage and schemas are correct. There are already [GTFS data validation tools](https://developers.google.com/transit/gtfs/guides/tools) to test the data in more powerful ways than json table schemas allow.
+The focus of the tests is to ensure the schemas are correct. There are already [GTFS data validation tools](https://developers.google.com/transit/gtfs/guides/tools) to test the data in more powerful ways than json table schemas allow.
 
-Tests are performed using [GoodTables](http://goodtables.okfnlabs.org).
+[Test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) can be verified using links to  [GoodTables](http://goodtables.okfnlabs.org).
 
-[Successful test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) data are recorded via a link to the GoodTables results.
-
-- The valid data is tested without and with a schema.
-  - use the link to the raw data and schema files as input to GoodTables e.g.
-    - https://raw.githubusercontent.com/Stephen-Gates/GTFS/master/data/agency.txt
-    - https://raw.githubusercontent.com/Stephen-Gates/GTFS/master/schemas/agency-schema.json
-- The invalid [test data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is tested with a schema to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
+[Invalid data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is used to test with a schema to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
 
 ## Schemas
 The schemas were created using [DataPackagist](http://datapackagist.okfnlabs.org).
