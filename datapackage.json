@@ -42,7 +42,7 @@
           }
         ]
       },
-      "path": "agency.txt",
+      "path": "data/agency.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -69,7 +69,7 @@
           }
         ]
       },
-      "path": "calendar_dates.txt",
+      "path": "data/calendar_dates.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -131,7 +131,7 @@
           }
         ]
       },
-      "path": "calendar.txt",
+      "path": "data/calendar.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -168,7 +168,7 @@
           }
         ]
       },
-      "path": "feed_info.txt",
+      "path": "data/feed_info.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -220,7 +220,7 @@
           }
         ]
       },
-      "path": "routes.txt",
+      "path": "data/routes.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -252,7 +252,7 @@
           }
         ]
       },
-      "path": "shapes.txt",
+      "path": "data/shapes.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -319,7 +319,7 @@
           }
         ]
       },
-      "path": "stops.txt",
+      "path": "data/stops.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
@@ -366,7 +366,7 @@
           }
         ]
       },
-      "path": "trips.txt",
+      "path": "data/trips.txt",
       "format": "CSV",
       "mediatype": "text/csv",
       "bytes": 0
