@@ -32,7 +32,7 @@ The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.
 - testing the invalid data with a schema
 
 ## Schemas
-The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.okfnlabs.org). Using DataPackagist:
+The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.okfnlabs.org). Using Data Packagist:
 
 - add some basic information about the data file (name, description, license, etc.)
 - upload the data file
