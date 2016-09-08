@@ -9,7 +9,7 @@ This data is the [General transit feed specification (GTFS) — South East Queen
 
 The data follows the [GTFS specification](https://developers.google.com/transit/gtfs/reference/) and some of its [extensions](https://developers.google.com/transit/gtfs/reference/gtfs-extensions) that define a common format for public transportation schedules and associated geographic information. The specification allows some files to be optional. It also allows some columns in the files to be optional. This means that the datapackage.json file and schemas may not work for [other GTFS files](https://code.google.com/archive/p/googletransitdatafeed/wikis/PublicFeeds.wiki).
 
-[The data](https://github.com/Stephen-Gates/GTFS/tree/master/data) is made up of a number of files.
+The [data](https://github.com/Stephen-Gates/GTFS/tree/master/data) is made up of a number of files. 
 
 Each data file is defined by a [schema](https://github.com/Stephen-Gates/GTFS/tree/master/schemas). The schemas follow the [json table schema specification](http://specs.frictionlessdata.io/json-table-schema/).
 
@@ -23,9 +23,13 @@ Two data files (shapes.txt and trips.txt) were too large to load into GitHub. Th
 ## Tests
 The focus of the tests is to ensure the schemas are correct. There are already [GTFS data validation tools](https://developers.google.com/transit/gtfs/guides/tools) to test the data in more powerful ways than json table schemas allow.
 
-[Test results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) can be verified using links to  [GoodTables](http://goodtables.okfnlabs.org).
+The [tests](https://github.com/Stephen-Gates/GTFS/tree/master/tests) are invalid data that is used to ensure the schema detects all errors (e.g. incorrect [types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
 
-[Invalid test data](https://github.com/Stephen-Gates/GTFS/tree/master/tests) is used to ensure the schema detects all errors (e.g. [incorrect types](http://specs.frictionlessdata.io/json-table-schema/#field-types-and-formats) and violated [constraints](http://specs.frictionlessdata.io/json-table-schema/#field-constraints)).
+## Results
+The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.md) can be verified using links to  [GoodTables](http://goodtables.okfnlabs.org). Tests include:
+- testing the valid data without a schema
+- testing the valid data with a schema
+- testing the invalid data with a schema
 
 ## Schemas
 The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [DataPackagist](http://datapackagist.okfnlabs.org). Using DataPackagist:
