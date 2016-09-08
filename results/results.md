@@ -20,7 +20,7 @@ Test results using valid data and its schema:
   - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
   - need to confirn if null allowed for route_type
   - file must contain at least one of route_short_name or route_long_name – no obvious test for this. Required:false set on both 
-- shapes
+- [shapes](http://goodtables.okfnlabs.org/reports?row_limit=100000&schema=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json&report_limit=1000&format=csv&data=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&report_type=grouped) and an [alternate results link](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdata%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json) *30,000 rows processed
 - stops   
   - fail due to optional url test (see [goodtables #109](https://github.com/frictionlessdata/goodtables/issues/109))
 - trips
