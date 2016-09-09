@@ -31,6 +31,11 @@ The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.
 - testing the valid data with a schema
 - testing the invalid data with a schema
 
+## Automatic Testing
+The scripts and .travis.yml file are used to automatically test the data that is defined in datapackage.json. Whenever there is a change to this repository, it triggers [Travis](https://travis-ci.org/) to validate the data.  
+
+The last automatic test returned https://api.travis-ci.org/Stephen-Gates/GTFS.svg 
+
 ## Schemas
 The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.okfnlabs.org). Using Data Packagist:
 
