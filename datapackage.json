@@ -14,60 +14,60 @@
       "name": "agency",
       "title": "Agency",
       "schema": {
-  "fields": [
-    {
-      "name": "agency_name",
-      "title": "Agency name",
-      "description": "The agency_name field contains the full name of the transit agency. Google Maps will display this name.",
-      "type": "string",
-      "format": "default",
-      "constraints": {
-        "required": true
-      }
-    },
-    {
-      "name": "agency_url",
-      "title": "Agency URL",
-      "description": "Contains the URL of the transit agency. The value must be a fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values.",
-      "type": "string",
-      "format": "uri",
-      "constraints": {
-        "required": true
-      }
-    },
-    {
-      "name": "agency_timezone",
-      "title": "Agency timezone",
-      "description": "Contains the timezone where the transit agency is located. Timezone names never contain the space character but may contain an underscore. Please refer to http://en.wikipedia.org/wiki/List_of_tz_zones for a list of valid values. If multiple agencies are specified in the feed, each must have the same agency_timezone. Should be Australia/Brisbane for Queensland",
-      "type": "string",
-      "format": "default",
-      "constraints": {
-        "required": true
-      }
-    },
-    {
-      "name": "agency_lang",
-      "title": "Agency language",
-      "description": "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). This setting defines capitalization rules and other language-specific settings for all text contained in this transit agency's feed. Please refer to http://www.loc.gov/standards/iso639-2/php/code_list.php for a list of valid values.",
-      "type": "string",
-      "format": "default",
-      "constraints": {
-        "required": true,
-        "pattern": "(en|EN)"
-      }
-    },
-    {
-      "name": "agency_phone",
-      "title": "Agency phone",
-      "description": "Contains a single voice telephone number for the specified agency. This field is a string value that presents the telephone number as typical for the agency's service area. It can and should contain punctuation marks to group the digits of the number. Dialable text (for example, TriMet's 503-238-RIDE) is permitted, but the field must not contain any other descriptive text.",
-      "type": "string",
-      "format": "default",
-      "constraints": {
-        "required": true
-      }
-    }
-  ]
-},
+        "fields": [
+          {
+            "name": "agency_name",
+            "title": "Agency name",
+            "description": "The agency_name field contains the full name of the transit agency. Google Maps will display this name.",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "agency_url",
+            "title": "Agency URL",
+            "description": "Contains the URL of the transit agency. The value must be a fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values.",
+            "type": "string",
+            "format": "uri",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "agency_timezone",
+            "title": "Agency timezone",
+            "description": "Contains the timezone where the transit agency is located. Timezone names never contain the space character but may contain an underscore. Please refer to http://en.wikipedia.org/wiki/List_of_tz_zones for a list of valid values. If multiple agencies are specified in the feed, each must have the same agency_timezone. Should be Australia/Brisbane for Queensland",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "agency_lang",
+            "title": "Agency language",
+            "description": "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). This setting defines capitalization rules and other language-specific settings for all text contained in this transit agency's feed. Please refer to http://www.loc.gov/standards/iso639-2/php/code_list.php for a list of valid values.",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "pattern": "(en|EN)"
+            }
+          },
+          {
+            "name": "agency_phone",
+            "title": "Agency phone",
+            "description": "Contains a single voice telephone number for the specified agency. This field is a string value that presents the telephone number as typical for the agency's service area. It can and should contain punctuation marks to group the digits of the number. Dialable text (for example, TriMet's 503-238-RIDE) is permitted, but the field must not contain any other descriptive text.",
+            "type": "string",
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
+          }
+        ]
+      },
       "path": "data/agency.txt",
       "format": "CSV",
       "mediatype": "text/csv",
@@ -80,18 +80,34 @@
         "fields": [
           {
             "name": "service_id",
+            "title": "Service ID",
+            "description": "Contains an ID that uniquely identifies a set of dates when a service exception is available for one or more routes. Each (service_id, date) pair can only appear once in calendar_dates.txt. If the a service_id value appears in both the calendar.txt and calendar_dates.txt files, the information in calendar_dates.txt modifies the service information specified in calendar.txt. This field is referenced by the trips.txt file.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "date",
-            "type": "datetime",
-            "format": "default"
+            "title": "Date",
+            "description": "Specifies a particular date when service availability is different than the norm. You can use the exception_type field to indicate whether service is available on the specified date.  The date field's value should be in YYYYMMDD format.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "exception_type",
+            "title": "Exception Type",
+            "description": "Indicates whether service is available on the date specified in the date field.  A value of 1 indicates that service has been added for the specified date. A value of 2 indicates that service has been removed for the specified date. For example, suppose a route has one set of trips available on holidays and another set of trips available on all other days. You could have one service_id that corresponds to the regular service schedule and another service_id that corresponds to the holiday schedule. For a particular holiday, you would use the calendar_dates.txt file to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 1,
+              "maximum": 2
+            }
           }
         ]
       },
@@ -107,53 +123,111 @@
         "fields": [
           {
             "name": "service_id",
+            "title": "Service ID",
+            "description": "Contains an ID that uniquely identifies a set of dates when service is available for one or more routes. Each service_id value can appear at most once in a calendar.txt file. This value is dataset unique. It is referenced by the trips.txt file.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "unique": true,
+              "required": true
+            }
           },
           {
             "name": "monday",
+            "title": "Monday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Mondays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "tuesday",
+            "title": "Tuesday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Tuesdays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "wednesday",
+            "title": "Wednesday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Wednesdays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "thursday",
+            "title": "Thursday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Thursdays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "friday",
+            "title": "Friday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Fridays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "saturday",
+            "title": "Saturday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Saturdays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "sunday",
+            "title": "Sunday",
+            "description": "Contains a binary value that indicates whether the service is valid for all Sundays.",
             "type": "integer",
-            "format": "default"
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 1
+            }
           },
           {
             "name": "start_date",
-            "type": "datetime",
-            "format": "default"
+            "title": "Start Date",
+            "description": "The start_date field contains the start date for the service.  The start_date field's value should be in YYYYMMDD format.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "end_date",
-            "type": "datetime",
-            "format": "default"
+            "title": "End Date",
+            "description": "Contains the end date for the service. This date is included in the service interval.  The end_date field's value should be in YYYYMMDD format.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": true
+            }
           }
         ]
       },
@@ -169,28 +243,53 @@
         "fields": [
           {
             "name": "feed_publisher_name",
+            "title": "Feed Publisher Name",
+            "description": "Contains the full name of the organization that publishes the feed. (This may be the same as one of the agency_name values in agency.txt.) GTFS-consuming applications can display this name when giving attribution for a particular feed's data.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "feed_publisher_url",
+            "title": "Feed Publisher URL",
+            "description": "Contains the URL of the feed publishing organization's website. (This may be the same as one of the agency_url values in agency.txt.) The value must be a fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped.",
             "type": "string",
-            "format": "default"
+            "format": "uri",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "feed_lang",
+            "title": "Feed Language",
+            "description": "Contains a IETF BCP 47 language code specifying the default language used for the text in this feed. This setting helps GTFS consumers choose capitalization rules and other language-specific settings for the feed.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "feed_start_date",
-            "type": "datetime",
-            "format": "default"
+            "title": "Feed Start Date",
+            "description": "The feed provides complete and reliable schedule information for service in the period from the beginning of the feed_start_date day to the end of the feed_end_date day. Both days are given as dates in YYYYMMDD format as for calendar.txt, or left empty if unavailable.  The feed_end_date date must not precede the feed_start_date date if both are given. Feed providers are encouraged to give schedule data outside this period to advise of likely future service, but feed consumers should treat it mindful of its non-authoritative status.  If feed_start_date or feed_end_date extend beyond the active calendar dates defined in calendar.txt and calendar_dates.txt, the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "feed_end_date",
-            "type": "datetime",
-            "format": "default"
+            "title": "Feed End Date",
+            "description": "The feed provides complete and reliable schedule information for service in the period from the beginning of the feed_start_date day to the end of the feed_end_date day. Both days are given as dates in YYYYMMDD format as for calendar.txt, or left empty if unavailable.  The feed_end_date date must not precede the feed_start_date date if both are given. Feed providers are encouraged to give schedule data outside this period to advise of likely future service, but feed consumers should treat it mindful of its non-authoritative status.  If feed_start_date or feed_end_date extend beyond the active calendar dates defined in calendar.txt and calendar_dates.txt, the feed is making an explicit assertion that there is no service for dates within the feed_start_date or feed_end_date range but not included in the active calendar dates.",
+            "type": "date",
+            "format": "fmt:%Y%m%d",
+            "constraints": {
+              "required": false
+            }
           }
         ]
       },
@@ -206,43 +305,80 @@
         "fields": [
           {
             "name": "route_id",
+            "description": "Contains an ID that uniquely identifies a route. The route_id is dataset unique.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
           },
           {
             "name": "route_short_name",
+            "description": "Contains the short name of a route. This will often be a short, abstract identifier like \"32\", \"100X\", or \"Green\" that riders use to identify a route, but which doesn't give any indication of what places the route serves.  At least one of route_short_name or route_long_name must be specified, or potentially both if appropriate. If the route does not have a short name, please specify a route_long_name and use an empty string as the value for this field.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "route_long_name",
+            "description": "Contains the full name of a route. This name is generally more descriptive than the route_short_name and will often include the route's destination or stop. At least one of route_short_name or route_long_name must be specified, or potentially both if appropriate. If the route does not have a long name, please specify a route_short_name and use an empty string as the value for this field.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "route_desc",
+            "description": "Contains a description of a route. Please provide useful, quality information. Do not simply duplicate the name of the route. For example, \"A trains operate between Inwood-207 St, Manhattan and Far Rockaway-Mott Avenue, Queens at all times. Also from about 6AM until about midnight, additional A trains operate between Inwood-207 St and Lefferts Boulevard (trains typically alternate between Lefferts Blvd and Far Rockaway).\"",
             "type": "any",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "route_type",
+            "description": "Describes the type of transportation used on a route. Valid values for this field are: •0: Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area.  •1: Subway, Metro. Any underground rail system within a metropolitan area.  •2: Rail. Used for intercity or long-distance travel.  •3: Bus. Used for short- and long-distance bus routes.  •4: Ferry. Used for short- and long-distance boat service.  •5: Cable car. Used for street-level cable cars where the cable runs beneath the car.  •6: Gondola, Suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable.  •7: Funicular. Any rail system designed for steep inclines.",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": 0,
+              "maximum": 7
+            }
           },
           {
             "name": "route_url",
+            "description": "Contains the URL of a web page about that particular route. This should be different from the agency_url.  The value must be a fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values.",
             "type": "string",
-            "format": "default"
+            "format": "uri",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "route_color",
+            "description": "In systems that have colors assigned to routes, this defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF).  The color difference between route_color and route_text_color should provide sufficient contrast when viewed on a black and white screen. The W3C Techniques for Accessibility Evaluation And Repair Tools document offers a useful algorithm for evaluating color contrast. There are also helpful online tools for choosing contrasting colors, including the snook.ca Color Contrast Check application.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "pattern": "[A-F\\d]{6}"
+            }
           },
           {
             "name": "route_text_color",
+            "description": "Specifies a legible color to use for text drawn against a background of route_color. The color must be provided as a six-character hexadecimal number, for example, FFD700. If no color is specified, the default text color is black (000000).  The color difference between route_color and route_text_color should provide sufficient contrast when viewed on a black and white screen.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "pattern": "[A-F\\d]{6}"
+            }
           }
         ]
       },
@@ -258,23 +394,44 @@
         "fields": [
           {
             "name": "shape_id",
+            "description": "Contains an ID that uniquely identifies a shape.",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "shape_pt_lat",
+            "description": "Associates a shape point's latitude with a shape ID. The field value must be a valid WGS 84 latitude. Each row in shapes.txt represents a shape point in your shape definition.",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": -29.5,
+              "maximum": -9
+            }
           },
           {
             "name": "shape_pt_lon",
+            "description": "Associates a shape point's longitude with a shape ID. The field value must be a valid WGS 84 longitude value from -180 to 180. Each row in shapes.txt represents a shape point in your shape definition.",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": 138,
+              "maximum": 155
+            }
           },
           {
             "name": "shape_pt_sequence",
+            "description": "Associates the latitude and longitude of a shape point with its sequence order along the shape. The values for shape_pt_sequence must be non-negative integers, and they must increase along the trip.",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false,
+              "minimum": 0
+            }
           }
         ]
       },
@@ -290,59 +447,102 @@
         "fields": [
           {
             "name": "stop_id",
+            "description": "Contains an ID that uniquely identifies a stop or station. Multiple routes may use the same stop. The stop_id is dataset unique.",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
           },
           {
             "name": "stop_code",
+            "description": "Contains short text or a number that uniquely identifies the stop for passengers. Stop codes are often used in phone-based transit information systems or printed on stop signage to make it easier for riders to get a stop schedule or real-time arrival information for a particular stop.  The stop_code field should only be used for stop codes that are displayed to passengers. For internal codes, use stop_id. This field should be left blank for stops without a code.",
             "type": "integer",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "stop_name",
+            "description": "Contains the name of a stop or station. Please use a name that people will understand in the local and tourist vernacular.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "stop_desc",
+            "description": "Contains a description of a stop. Please provide useful, quality information. Do not simply duplicate the name of the stop.",
             "type": "any",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "stop_lat",
+            "description": "Contains the latitude of a stop or station. The field value must be a valid WGS 84 latitude. A latitude within the bounds of Queensland ",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": -29.5,
+              "maximum": -9
+            }
           },
           {
             "name": "stop_lon",
+            "description": "Contains the longitude of a stop or station. The field value must be a valid WGS 84 longitude value from -180 to 180. A longitude within the bounds of Queensland",
             "type": "number",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true,
+              "minimum": 138,
+              "maximum": 155
+            }
           },
           {
             "name": "zone_id",
+            "description": "Defines the fare zone for a stop ID. Zone IDs are required if you want to provide fare information using fare_rules.txt. If this stop ID represents a station, the zone ID is ignored.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraints": {
+              "required": true
+            }
           },
           {
             "name": "stop_url",
+            "description": "Contains the URL of a web page about a particular stop. This should be different from the agency_url and the route_url fields.  The value must be a fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values.",
             "type": "string",
-            "format": "default"
+            "format": "uri",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "location_type",
+            "description": "Identifies whether this stop ID represents a stop or station. If no location type is specified, or the location_type is blank, stop IDs are treated as stops. Stations can have different properties from stops when they are represented on a map or used in trip planning.  The location type field can have the following values: •0 or blank: Stop. A location where passengers board or disembark from a transit vehicle.  •1: Station. A physical structure or area that contains one or more stop.",
             "type": "integer",
             "format": "default"
           },
           {
             "name": "parent_station",
+            "description": "For stops that are physically located inside stations, this field identifies the station associated with the stop. To use this field, stops.txt must also contain a row where this stop ID is assigned location type=1.",
             "type": "string",
             "format": "default"
           },
           {
             "name": "platform_code",
+            "description": "Indicates the platform identifier for a platform stop. This should be just the platform identifier (eg. “G” or “3”). Words like “platform” or “track” (or the feed’s language-specific equivalent) should not be included. This allows feed consumers to more easily internationalize and localize the platform identifier into other languages.",
             "type": "string",
             "format": "default"
           }
+        ],
+        "primaryKey": [
+          "stop_id"
         ]
       },
       "path": "data/stops.txt",
@@ -357,38 +557,75 @@
         "fields": [
           {
             "name": "route_id",
+            "title": "Route Id",
+            "description": "an ID that uniquely identifies a route. This value is referenced from the routes.txt file.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraint": {
+              "required": true
+            }
           },
           {
             "name": "service_id",
+            "title": "Service Id",
+            "description": "An ID that uniquely identifies a set of dates when service is available for one or more routes.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraint": {
+              "required": true
+            }
           },
           {
             "name": "trip_id",
+            "title": "Trip Id",
+            "description": "An ID that identifies a trip. The trip_id is dataset unique.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraint": {
+              "required": true,
+              "unique": true
+            }
           },
           {
             "name": "trip_headsign",
+            "title": "Trip Headsign",
+            "description": "The text that appears on a sign that identifies the trip's destination to passengers.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraint": {
+              "required": false
+            }
           },
           {
             "name": "direction_id",
-            "type": "integer",
-            "format": "default"
+            "title": "Direction Id",
+            "description": "A binary value that indicates the direction of travel for a trip. Use this field to distinguish between bi-directional trips with the same route_id. This field is not used in routing; it provides a way to separate trips by direction when publishing time tables. You can specify names for each direction with the trip_headsign field.  0: Travel in one direction (outbound travel) 1: Travel in the opposite direction (inbound travel)",
+            "type": "string",
+            "format": "default",
+            "constraint": {
+              "required": false,
+              "pattern": "(0|1)"
+            }
           },
           {
             "name": "block_id",
-            "type": "any",
-            "format": "default"
+            "title": "Block Id",
+            "description": "Identifies the block to which the trip belongs. A block consists of two or more sequential trips made using the same vehicle, where a passenger can transfer from one trip to the next just by staying in the vehicle. The block_id must be referenced by two or more trips in trips.txt.",
+            "type": "string",
+            "format": "default",
+            "constraint": {
+              "required": false
+            }
           },
           {
             "name": "shape_id",
+            "title": "Shape Id",
+            "description": "An ID that defines a shape for the trip. This value is referenced from the shapes.txt file. The shapes.txt file allows you to define how a line should be drawn on the map to represent a trip.",
             "type": "string",
-            "format": "default"
+            "format": "default",
+            "constraint": {
+              "required": false
+            }
           }
         ]
       },
