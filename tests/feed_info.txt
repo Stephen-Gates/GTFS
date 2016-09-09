@@ -1,0 +1,6 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date
+Department of Transport and Main Roads - TransLink Division,http://www.translink.com.au/,en,20160823,20161130
+Hover Bus,http:/www.translink.com.au,cz,2016-08-23,2015-02-28
+City Metro,mailto://hello@citymetro.com,au,EN,20151131,20140230
+Brisbane Underground,,,,
+,,,
