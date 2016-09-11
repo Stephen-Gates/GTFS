@@ -51,7 +51,7 @@ Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsonedit
 Some constraints use regular expressions to define a pattern. Use a online tool to help create and test a regular expresion e.g. [regexr.com](http://regexr.com/) or [regex101](https://regex101.com/).
 
 ## View the Data Package
-Data packages are about providing machine-readable metadata for your data. You can [view a human-readable version of the data package](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdatapackage.json#readme) data, and readme files using the [Data Package Viewer](http://data.okfn.org/tools/view).
+Data packages are about providing machine-readable metadata for your data. You can [view a human-readable version of the data package](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdatapackage.json#readme) data, and readme files using the [Data Package Viewer](http://data.okfn.org/tools/view). There are a couple of [issues](https://github.com/okfn/data.okfn.org-new/issues) with the viewer including providing an incorrect link to the metadata [data.okfn.org-new #9](https://github.com/okfn/data.okfn.org-new/issues).
 
 ## License
 All items in this repository, apart from the data, are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
