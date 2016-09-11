@@ -9,7 +9,7 @@ This data is the [General transit feed specification (GTFS) — South East Queen
 
 The data follows the [GTFS specification](https://developers.google.com/transit/gtfs/reference/) and some of its [extensions](https://developers.google.com/transit/gtfs/reference/gtfs-extensions) that define a common format for public transportation schedules and associated geographic information. The specification allows some files to be optional. It also allows some columns in the files to be optional. This means that the datapackage.json file and schemas may not work for [other GTFS files](https://code.google.com/archive/p/googletransitdatafeed/wikis/PublicFeeds.wiki).
 
-The [data](https://github.com/Stephen-Gates/GTFS/tree/master/data) is made up of a number of files. 
+The [data](https://github.com/Stephen-Gates/GTFS/tree/master/data) is made up of a number of files.
 
 Each data file is defined by a [schema](https://github.com/Stephen-Gates/GTFS/tree/master/schemas). The schemas follow the [json table schema specification](http://specs.frictionlessdata.io/json-table-schema/).
 
@@ -34,7 +34,7 @@ The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.
 ## Automatic Testing
 The scripts and .travis.yml file are used to automatically test the data that is defined in datapackage.json. Whenever there is a change to this repository, it triggers [Travis](https://travis-ci.org/) to validate the data.  
 
-The last automatic test returned [![datapackage validation](https://travis-ci.org/Stephen-Gates/GTFS.svg?branch=master)](https://travis-ci.org/Stephen-Gates/GTFS) 
+The last automatic test returned [![datapackage validation](https://travis-ci.org/Stephen-Gates/GTFS.svg?branch=master)](https://travis-ci.org/Stephen-Gates/GTFS)
 
 ## Schemas
 The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.okfnlabs.org). Using Data Packagist:
@@ -49,6 +49,9 @@ Good Tables can only use a json table schema for validation ([see goodtables-web
 Edit the schema file with a text editor (e.g. [ATOM](https://atom.io), [jsoneditoronline.org](http://www.jsoneditoronline.org)) and add constraints, refine types and formats, etc. You may like to use the [json table schema schema](https://raw.githubusercontent.com/frictionlessdata/schemas/master/json-table-schema.json) to improve your editing experience.
 
 Some constraints use regular expressions to define a pattern. Use a online tool to help create and test a regular expresion e.g. [regexr.com](http://regexr.com/) or [regex101](https://regex101.com/).
+
+## View the Data Package
+Data packages are about providing machine-readable metadata for your data. You can [view a human-readable version of the data package](http://data.okfn.org/tools/view?url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fdatapackage.json#readme) of the data, and readme files using the [Data Package Viewer](http://data.okfn.org/tools/view).
 
 ## License
 All items in this repository, apart from the data, are licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
