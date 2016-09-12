@@ -27,7 +27,7 @@ Use the links below to perform the tests using Good Tables.
 - Test invalid calendar_dates.txt with a schema
 - [Test invalid feed_info.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Ftests%2Ffeed_info.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Ffeed_info-schema.json)
 - Test invalid routes.txt with a schema
-- [Test invalid shapes.txt with a schema] schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Ftests%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json)
+- [Test invalid shapes.txt with a schema](http://goodtables.okfnlabs.org/reports?data_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Ftests%2Fshapes.txt&format=csv&encoding=&schema_url=https%3A%2F%2Fraw.githubusercontent.com%2FStephen-Gates%2FGTFS%2Fmaster%2Fschemas%2Fshapes-schema.json)
 - Test invalid stops.txt with a schema
 - Test invalid trips.txt with a schema
 
