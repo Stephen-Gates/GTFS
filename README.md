@@ -31,6 +31,10 @@ The [results](https://github.com/Stephen-Gates/GTFS/blob/master/results/results.
 - testing the valid data with a schema
 - testing the invalid data with a schema
 
+Good Tables doesn't check all types of errors (yet). Somethings not checked include:
+- Foreign keys. (See Good Tables[#17](https://github.com/frictionlessdata/goodtables/issues/17),  [#8](https://github.com/frictionlessdata/goodtables/issues/8))
+- Some constraints (See Good Tables)[#55](https://github.com/frictionlessdata/goodtables/issues/55)
+
 ## Automatic Testing
 The scripts and .travis.yml file are used to automatically test the data that is defined in datapackage.json. Whenever there is a change to this repository, it triggers [Travis](https://travis-ci.org/) to validate the data.  
 
