@@ -41,7 +41,7 @@ The scripts and .travis.yml file are used to automatically test the data that is
 The last automatic test returned [![datapackage validation](https://travis-ci.org/Stephen-Gates/GTFS.svg?branch=master)](https://travis-ci.org/Stephen-Gates/GTFS)
 
 ## Schemas
-The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.okfnlabs.org). Using Data Packagist:
+The [schemas](https://github.com/Stephen-Gates/GTFS/tree/master/schemas) were created using [Data Packagist](http://datapackagist.openknowledge.io/). Using Data Packagist:
 
 - add some basic information about the data file (name, description, license, etc.)
 - upload the data file
