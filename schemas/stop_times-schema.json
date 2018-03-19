@@ -1,0 +1,34 @@
+{
+      "fields": [
+        {
+          "name": "trip_id",
+          "title": "Trip ID",
+          "description": "The trip_id field contains an ID that identifies a trip.",
+          "type": "string",
+          "format": "default",
+          "constraints": {
+            "required": true
+          }
+        },
+        {
+          "name": "arrival_time",
+          "title": "Arrival time",
+          "description": "The arrival_time specifies the arrival time at a specific stop for a specific trip on a route. HH:MM:SS",
+          "type": "string",
+          "format": "default",
+          "constraints": {
+            "required": true
+          }
+        },
+        {
+          "name": "arrival_time",
+          "title": "Arrival time",
+          "description": "The arrival_time specifies the arrival time at a specific stop for a specific trip on a route. HH:MM:SS",
+          "type": "string",
+          "format": "default",
+          "constraints": {
+            "required": true
+          }
+        }
+      ]
+}
