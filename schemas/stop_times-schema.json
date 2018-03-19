@@ -1,0 +1,102 @@
+{
+      "fields": [
+        {
+          "name": "trip_id",
+          "title": "Trip ID",
+          "description": "The trip_id field contains an ID that identifies a trip.",
+          "type": "string",
+          "constraints": {
+            "required": true
+          }
+        },
+        {
+          "name": "arrival_time",
+          "title": "Arrival time",
+          "description": "The arrival_time specifies the arrival time at a specific stop for a specific trip on a route. HH:MM:SS",
+          "type": "string",
+          "pattern": "([0-9]{2}):([0-9]{2}):([0-9]{2})",
+          "constraints": {
+            "required": true
+          }
+        },
+        {
+          "name": "departure_time",
+          "title": "Departure time",
+          "description": "The departure_time specifies the departure time from a specific stop for a specific trip on a route. HH:MM:SS",
+          "type": "string",
+          "pattern": "([0-9]{2}):([0-9]{2}):([0-9]{2})",
+          "constraints": {
+            "required": true
+          }
+        },
+        {
+          "name": "stop_id",
+          "title": "Stop ID",
+          "description": "The stop_id field contains an ID that uniquely identifies a stop.",
+          "type": "string",
+          "constraints": {
+            "required": true
+            "unique": true
+          }
+        },
+        {
+          "name": "stop_sequence",
+          "title": "Stop sequence",
+          "description": "The stop_sequence field identifies the order of the stops for a particular trip. The values for stop_sequence must be non-negative integers",
+          "type": "integer",
+          "pattern": "^(\+?\d+|0+)$",
+          "constraints": {
+            "required": true
+          }
+        },
+        {
+          "name": "stop_headsign",
+          "title": "Stop headsign",
+          "description": "The stop_headsign field contains the text that appears on a sign that identifies the trip's destination to passengers.",
+          "type": "string",
+          "constraints": {
+            "required": false
+          }
+        },
+        {
+          "name": "pickup_type",
+          "title": "Pickup type",
+          "description": "The pickup_type field indicates whether passengers are picked up at a stop as part of the normal schedule or whether a pickup at the stop is not available.",
+          "type": "integer",
+          "pattern": "[0-3]{1}",
+          "constraints": {
+            "required": false
+          }
+        },
+        {
+          "name": "drop_off_type",
+          "title": "Drop off type",
+          "description": "The drop_off_type field indicates whether passengers are dropped off at a stop as part of the normal schedule or whether a drop off at the stop is not available.",
+          "type": "integer",
+          "pattern": "[0-3]{1}",
+          "constraints": {
+            "required": false
+          }
+        },
+        {
+          "name": "shape_dist_traveled",
+          "title": "Drop off type",
+          "description": "When used in the stop_times.txt file, the shape_dist_traveled field positions a stop as a distance from the first shape point.",
+          "type": "number",
+          "pattern": "^(\+?\d+|0+)$",
+          "constraints": {
+            "required": false
+          }
+        },
+        {
+          "name": "timepoint",
+          "title": "Timepoint",
+          "description": "The timepoint field can be used to indicate if the specified arrival and departure times for a stop are strictly adhered to by the transit vehicle or if they are instead approximate and/or interpolated times.",
+          "type": "integer",
+          "pattern": "[0-2]{1}|^$",
+          "constraints": {
+            "required": false
+          }
+        }
+      ]
+}
